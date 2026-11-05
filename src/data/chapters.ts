@@ -118,6 +118,94 @@ export const chapters: Chapter[] = [
         k: "warn",
         t: "Backfeeding — plugging a generator into a wall socket — energizes the lines outside. Lineworkers have died that way. The legal, non-lethal version is a transfer switch or interlock installed by an electrician before the disaster. If you do not have one, run extension cords from the generator outdoors to the few loads you need.",
       },
+      {
+        k: "h",
+        t: "The next hour, if the street is still dark",
+      },
+      {
+        k: "steps",
+        items: [
+          "Find the main water valve and the gas meter. Look. Do not turn them unless you have a reason named in this manual.",
+          "Put a thermometer in the fridge if you own one, then shut the door. Write the time on the note.",
+          "Move a headlamp, the radio, the bleach, and the bucket lids to one table. The first night is a scavenger hunt otherwise.",
+          "Text the out-of-area contact one line: where you are, who is with you, where you will be tomorrow morning. Then stop.",
+          "Eat something that will spoil. Cook nothing indoors.",
+          "Set two check-in times for the household, even if you are all in the same room. People drift.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "house",
+    n: "03b",
+    title: "The house, before you need it",
+    dek: "Valves, breakers, and the map of your own walls. Learn them with the lights on.",
+    blocks: [
+      {
+        k: "p",
+        t: "A long blackout is a plumbing and gas problem that happens to start as an electrical one. The people who do well can put a hand on four things in the dark: the main water valve, the gas meter, the electrical panel, and the water-heater drain. Find them this weekend. Tag them. Put the wrench where your hand already knows.",
+      },
+      {
+        k: "h",
+        t: "Water main",
+      },
+      {
+        k: "p",
+        t: "The shutoff is usually where the line enters the house, often near the front foundation, or in a box at the meter. A ball valve is a quarter turn. A gate valve is many turns, clockwise to close, and it may be stiff. Close it if a pipe has burst, if you are leaving in a hard freeze with no heat, or if the city tells you the mains are contaminated and you do not want that water pushed into the heater. Do not close it as a drill and then forget. Open a faucet after you reopen it and let the air spit out before anyone uses a tap.",
+      },
+      {
+        k: "h",
+        t: "What is already in the pipes",
+      },
+      {
+        k: "steps",
+        items: [
+          "Fill every jug from the cold tap while pressure lasts. That is cleaner than the heater.",
+          "When pressure dies, open the highest faucet in the house so air can enter.",
+          "Catch what comes out of the lowest faucet into a clean pot. A typical house holds a few gallons in the lines, not a week.",
+          "Then the heater, as in the first-hour chapter. Inlet closed, power or gas to the tank off, drain at the bottom, discard the first rusty flow.",
+          "The toilet tank is a few gallons if it has no cleaner tablet. The bowl is not a source.",
+          "Ice in the freezer is drinking water. Melt it in a covered pot. Do not set it on the counter to drip through meat juice.",
+        ],
+      },
+      {
+        k: "h",
+        t: "Gas",
+      },
+      {
+        k: "warn",
+        t: "Shut the gas off only if you smell it, hear it, or see damage. A closed meter stays closed until the utility relights the appliances. You do not get to ‘just turn it back on’ because dinner is late. Pilots, leaks, and explosions are their job.",
+      },
+      {
+        k: "p",
+        t: "The meter valve is a rectangular tang, in line with the pipe when open, across the pipe when closed. A crescent wrench or the dedicated tool turns it a quarter turn. Practice finding it. Do not practice closing it. If you shut it during a real leak: get people out first, do not flip light switches, do not use the phone in the building, and call the utility from outside. Aftershocks and vehicle hits on meters are the usual reasons a blackout and a gas leak arrive together.",
+      },
+      {
+        k: "h",
+        t: "The panel",
+      },
+      {
+        k: "bullets",
+        items: [
+          "Stand on a dry floor. One hand. Do not open the metal dead-front or poke at the bars.",
+          "Switch off the large double breakers for the range, dryer, water heater, and air conditioner. Leave one lighting circuit on so a lamp tells you the grid is back.",
+          "Label anything unlabeled while you can still see. ‘Left bedroom’ beats a blank slot at 2 a.m.",
+          "A transfer switch, if you have one, is the only legitimate path from a generator to the panel. Anything else is a cord.",
+          "When power returns, wait a few minutes, then bring loads back one at a time. The whole block’s compressors starting together is how a second outage starts.",
+        ],
+      },
+      {
+        k: "h",
+        t: "Sewer",
+      },
+      {
+        k: "p",
+        t: "Toilets flush only while the tank has water and the city sewer is accepting it. In a wide outage the lift stations die. A flush then sends the neighbor’s sewage toward the lowest apartment. Pouring a bucket into the bowl to ‘make it flush’ is the same mistake with more effort. The buckets in the sanitation chapter are the toilet until you hear, from an official, that the sewer is taking flow.",
+      },
+      {
+        k: "note",
+        t: "Write a one-page map: water main, gas meter, panel, heater drain, fire extinguisher, bucket spot, rally point. Tape it inside a cupboard. The person who is home when this starts may not be the person who learned it.",
+      },
     ],
   },
   {
@@ -217,6 +305,44 @@ export const chapters: Chapter[] = [
         k: "p",
         t: "You can make a prefilter: a clean bucket with a hole, layered cloth, gravel, sand, and crushed charcoal from plain wood (not briquettes with lighter fluid). It knocks down mud and some smell. It does not make water safe. Boil or bleach what comes out the bottom. Commercial hollow-fiber filters are better at the mud-and-bacteria step and still want a disinfection step for viruses.",
       },
+      {
+        k: "h",
+        t: "A five-gallon jug, in drops",
+      },
+      {
+        k: "table",
+        head: ["Bleach", "Clear water", "Cloudy, colored, or very cold"],
+        rows: [
+          ["5–6%", "40 drops (5/8 teaspoon) per 5 gallons", "Double it"],
+          ["8.25%", "30 drops per 5 gallons", "Double it"],
+        ],
+      },
+      {
+        k: "p",
+        t: "Stir. Wait 30 minutes. You want a faint pool smell, not a sting. Too strong: pour it between two clean containers to air it, or let it sit uncovered, and do not add more chemistry to ‘fix’ an overdose. Label the jug with the date and the source. Treated water you will drink within a few days does not need a second dose. Stored treated water you will keep for weeks: keep it sealed, cool, and dark, and smell it before you trust an old jug.",
+      },
+      {
+        k: "h",
+        t: "Sun, when the bottle is clear",
+      },
+      {
+        k: "p",
+        t: "WHO’s solar method is a backup, not your plan. Clear plastic bottle, one or two liters, water that is already clear enough to read newsprint through. Lay it in full sun for six hours, or two days if the sky is more than half cloud. It does not work on muddy water, and it does not remove fuel, metals, or salt. Filter and settle first. If you can boil or bleach, do that instead.",
+      },
+      {
+        k: "h",
+        t: "How the gallons actually leave",
+      },
+      {
+        k: "bullets",
+        items: [
+          "Drinking is the smaller half. Cooking rice and beans, washing hands, and a pot you rinse all spend the gallon.",
+          "A retained-heat cooker uses the water once. Dumping a second pot because the first was salty is how day ten surprises you.",
+          "Wash water can be yesterday’s cooking water, cooled, for hands and floors. Do not reverse that.",
+          "Date every jug. Drink the oldest clean jug first. A full closet of identical unlabeled water is how someone drinks the wash jug.",
+          "Keep one gallon per person where you sleep, separate from the store you will haul from. A night trip to the garage is how jugs get spilled.",
+        ],
+      },
     ],
   },
   {
@@ -258,6 +384,45 @@ export const chapters: Chapter[] = [
       {
         k: "note",
         t: "Store what you eat and eat what you store. A three-day pantry drill will teach you more than a second bag of beans you hate. Rotate by date. Keep sacks inside a metal can or a lidded bucket so mice do not get there first. Cool, dark, and off a damp concrete floor.",
+      },
+      {
+        k: "h",
+        t: "One boring day",
+      },
+      {
+        k: "table",
+        head: ["Meal", "What it is", "Why"],
+        rows: [
+          ["Morning", "Oats, a spoon of peanut butter, salt", "No long fire. Easy on a bad night’s sleep."],
+          ["Midday", "Rice, beans, oil, a pinch of salt, chili if you stored it", "The calorie meal. Cook a double pot and eat half cold later."],
+          ["Evening", "A can: fish, meat, or tomatoes on the leftover grain", "Uses almost no fuel. The thing people will actually finish."],
+        ],
+      },
+      {
+        k: "p",
+        t: "That pattern, plus a multivitamin, is not a cuisine. It is how you stop negotiating dinner every day. Spice, vinegar, dried onion, and coffee are morale and they are cheap. Buy them. A diet of plain rice for a month is how someone ‘can’t eat another bite’ with a full bucket left.",
+      },
+      {
+        k: "h",
+        t: "When the fuel is the shortage",
+      },
+      {
+        k: "bullets",
+        items: [
+          "No-cook: peanut butter, tortillas or crackers, canned fish, nuts, dried fruit, shelf milk if you drink it. This is the storm week, not the whole ninety days.",
+          "Cold-soak oats overnight in treated water. They are edible, not charming.",
+          "Cook a full pot when you light the stove, not three small ones. Leftovers get eaten the same day or chilled only if you still have a cold box.",
+          "Never leave cooked rice, beans, or meat in the warm zone — roughly 40°F to 140°F — for more than a couple of hours. Reheating does not fix rice that sat out.",
+          "A pound of dry rice is about two and a half pounds of cooked food and wants roughly two pounds of water. Count that water. The Plan page’s gallons are drinking water, not an invisible cooking budget.",
+        ],
+      },
+      {
+        k: "h",
+        t: "Pests and the closet",
+      },
+      {
+        k: "p",
+        t: "Mice, weevils, and a damp floor will eat the plan before you do. Keep grain in a bucket with a gasket lid, or a metal can. Bay leaves are folklore. A tight lid is the method. Freeze a new bag of flour or rice for a few days before you store it if you can, to kill insect eggs. Write the month on the lid with tape. Eat from the oldest lid. If a bag smells musty or the grains clump from moisture, it is compost, not a dare.",
       },
     ],
   },
@@ -305,6 +470,40 @@ export const chapters: Chapter[] = [
         k: "p",
         t: "Never start a wood fire with gasoline. A bottle of lighter fluid on coals has ended enough cookouts in ordinary years. Tinder, then twigs, then fuel. Hair tied. Pot stable before you let go of it. A pot of boiling beans dumped on a child in a shelter is a medical problem you cannot evacuate from.",
       },
+      {
+        k: "h",
+        t: "The camp stove, said once",
+      },
+      {
+        k: "steps",
+        items: [
+          "Outside, on a level surface that will not melt, away from the eaves and the tent wall.",
+          "Check the O-ring. A missing ring is a leak, not a quirk. Soapy water on a cold connection will bubble if gas is escaping. Never hunt a leak with a match.",
+          "Cylinder upright. Open the valve, then the stove’s own control. Light as the manufacturer says — match or clicker — with your face not over the burner.",
+          "If it flares, turn the control off, let it die, and start again. Do not pick up a flaring stove.",
+          "When the pot is done: control off, let the burner cool, then close the cylinder. A closed cylinder with an open stove is how the next person gets a face full of gas.",
+          "One-pound canisters and a 20-pound tank do not share a fitting unless you bought the hose that says they do. Test that hose on a calm afternoon, not in the rain.",
+        ],
+      },
+      {
+        k: "h",
+        t: "What a tank is worth",
+      },
+      {
+        k: "table",
+        head: ["Fuel", "Use it for", "Do not"],
+        rows: [
+          ["20 lb propane", "The daily pot, outdoors", "Store it in the bedroom or the hot car"],
+          ["1 lb canisters", "A wet day when the big tank stays outside", "Assume they last a month. They last meals."],
+          ["Gasoline", "A generator, in a real can, outside", "Pour it on charcoal or store it in a milk jug"],
+          ["Wood and twigs", "A yard stove when the tanks are done", "Burn it in the fireplace you have never used, or indoors in a pan"],
+          ["Sun", "A dark pot on a clear day", "Count on it in January rain"],
+        ],
+      },
+      {
+        k: "p",
+        t: "A fireplace or wood stove that you already know how to run, with a clean chimney, is a heat source. A fireplace you open for the first time during the outage is a smoke machine. If you do not know the damper and you have never seen that chimney swept, do not make it your heating plan this week. Carbon monoxide alarms do not cover every flue mistake. Sleep with a window cracked if you are burning anything in the house, and treat a headache plus nausea as ‘get out now,’ not as a cold.",
+      },
     ],
   },
   {
@@ -349,6 +548,24 @@ export const chapters: Chapter[] = [
           "A jug with holes, hung, is a shower. Skin infections start when nobody washes for a month. You do not need a spa. You need one soap-down a week and hands ten times a day.",
         ],
       },
+      {
+        k: "h",
+        t: "Dishes without a sink",
+      },
+      {
+        k: "steps",
+        items: [
+          "Scrape every plate into the trash. Food bits in the wash water turn it into soup.",
+          "Three basins, or one basin used three times. Wash with a little soap in treated or recently boiled water. Rinse. Then a last dip with a splash of the same unscented bleach you use for drinking water — a few drops in a gallon, not a cup.",
+          "Air-dry on a clean rack. A shared damp towel puts the last meal back on the fork.",
+          "Cook pots the same day. Dried bean cement costs more water than washing now.",
+          "Gray water goes on ornamental ground, far from the well and the rain barrel, or into the pee store. It does not go back into the drinking jugs, and it does not go down a dead sink if the sewer is dead.",
+        ],
+      },
+      {
+        k: "p",
+        t: "Trash will not be collected. Bag it, seal it, and stage it out of the kitchen so it does not feed rats in the room where you eat. Do not burn plastic. The smoke is the injury. Cans you emptied can be rinsed with wash water, crushed, and kept separate so they are not attracting anything.",
+      },
     ],
   },
   {
@@ -389,6 +606,38 @@ export const chapters: Chapter[] = [
         k: "p",
         t: "Wildfire smoke plus a blackout is a western summer pattern. N95 on if you must go out, no exertion, windows shut. A damp bandana is a weak filter. It is not an N95. If you can reach a cleaner-air room and the trip is safe, that is legitimate.",
       },
+      {
+        k: "h",
+        t: "Cold, in the order it goes wrong",
+      },
+      {
+        k: "table",
+        head: ["You see", "You do"],
+        rows: [
+          ["Shivering, numb fingers, still making sense", "Dry clothes, hat, calories, a small room, no alcohol. Alcohol makes people feel warm while they lose heat."],
+          ["Shivering stops, confusion, slurred talk", "This is hypothermia. Insulate, warm sweet drinks only if they can swallow safely, get help. Do not rub the limbs or put them next to a stove."],
+          ["White, waxy, numb skin on ears, fingers, toes", "Frostbite. Get to shelter. Rewarm gently against skin. Do not walk on a thawed foot if you can avoid it. Do not rub snow on it. That advice is a myth that adds damage."],
+        ],
+      },
+      {
+        k: "p",
+        t: "Layers: a dry base that is not cotton, an insulating layer (wool, fleece), a shell if the wind or rain is the problem. Wet cotton comes off. A change of socks in a bag is worth more than a second coat you cannot wear while the first is soaked. Sleep in a hat. Most of the heat you think you are losing ‘from the head’ is just the only skin you left uncovered.",
+      },
+      {
+        k: "h",
+        t: "The pipes, the night before a freeze",
+      },
+      {
+        k: "steps",
+        items: [
+          "Shut the main.",
+          "Open every faucet, hot and cold, upstairs and down.",
+          "Drain the lowest outdoor bib and the heater, power to the heater already off.",
+          "Flush the toilets once to empty the tank into the bowl, then leave the supply valves closed. Do not use that flush as a habit afterward.",
+          "Pour RV antifreeze only into traps and the bowl if you already own it and you know it is the plumbing kind. Do not put automotive antifreeze in any pipe that might later touch drinking water. When in doubt, skip the chemical and just drain.",
+          "Leave the faucets open so leftover water has somewhere to expand.",
+        ],
+      },
     ],
   },
   {
@@ -421,6 +670,28 @@ export const chapters: Chapter[] = [
       {
         k: "note",
         t: "Do not store the only radio you use in the can. The can is the spare. The one you will turn on at hour one sits on a shelf you can find in the dark.",
+      },
+      {
+        k: "h",
+        t: "A charging day",
+      },
+      {
+        k: "steps",
+        items: [
+          "Panel in real sun, not behind window glass if you can help it. Glass cuts the output. Face it south, tilted, and move it once at midday.",
+          "Charge the battery pack, not the phone directly, if the panel is small. Then the phone gets a short, planned charge.",
+          "Headlamp and radio get their turn before anyone’s spare tablet.",
+          "Stop at dusk. A panel left out overnight is a gift to the weather and to anyone walking past.",
+          "If the pack gets hot, swollen, or smells sweet and chemical, it is done. Do not puncture it. Set it outside on concrete, away from the house, until you can dispose of it.",
+        ],
+      },
+      {
+        k: "p",
+        t: "A 10-watt panel in a good hour is on the order of 8 to 10 watt-hours. A phone might take half of that from empty. A cloudy week is a battery diet: radio at the two set hours, one text, lights on low, no video. Write the county map on paper so the phone can stay off.",
+      },
+      {
+        k: "p",
+        t: "Bicycles are the vehicle that still works when the pumps at the gas station do not. A pump, a spare tube, and lights you have used are the kit. Ride in daylight. A car with a full tank is a better shelter and a worse plan if every intersection is dark and the radio is saying stay off the roads. Do not idle a car in a closed garage to charge a phone. That is the generator mistake with a nicer seat.",
       },
     ],
   },
@@ -462,6 +733,29 @@ export const chapters: Chapter[] = [
           "Fever: acetaminophen or ibuprofen per the label, fluids, watch the person. A stiff neck with fever and light sensitivity is not a ‘wait it out’ symptom when care exists.",
           "Spare glasses. The prescription on paper. A person who cannot see cannot tend a stove safely.",
           "Do not take random expired antibiotics as a strategy. Some degrade into uselessness and a few old drugs have been harmful. The strategy is to have the right medicine, in date, for the conditions you already have, and a clean wound technique for everything else.",
+        ],
+      },
+      {
+        k: "h",
+        t: "Burns",
+      },
+      {
+        k: "p",
+        t: "Cool the burn under clean running water, or with wet clean cloths, for about twenty minutes. Not ice. Not butter, toothpaste, or oil. Then a clean non-stick cover, loose. A burn that is larger than the person’s palm, that circles a limb, that is on the face, hands, feet, or groin, or that looks white and leathery, is a hospital problem if a hospital exists. Chemical burns: rinse a long time, and do not try to ‘neutralize’ them with whatever is under the sink. Blisters that are intact are a dressing. Popping them on the first day is how they get dirty.",
+      },
+      {
+        k: "h",
+        t: "What belongs in the box",
+      },
+      {
+        k: "bullets",
+        items: [
+          "Gloves, gauze, roller bandage, tape, a few non-stick pads, tweezers, a 60 ml irrigation syringe, soap.",
+          "Acetaminophen and ibuprofen, in date, with the adult and child doses written on the outside of the box.",
+          "Oral rehydration packets. Antihistamine you already know you tolerate, if someone in the house gets hives or a bad insect sting.",
+          "Any prescription, with days of extra, and a paper list of allergies.",
+          "Thermometer and a spare pair of glasses. A flashlight that lives in the box so the box is useful at night.",
+          "Nothing you do not know how to use. A suture kit is not a skill.",
         ],
       },
     ],
@@ -598,6 +892,27 @@ export const chapters: Chapter[] = [
         k: "note",
         t: "Write the plan on the Plan page, then copy it onto paper and put the paper in the shelter room. This app will not be in your pocket if your phone is in the car.",
       },
+      {
+        k: "h",
+        t: "The card, word for word",
+      },
+      {
+        k: "p",
+        t: "One index card per person, in a pocket or a bag they actually carry. Not a novel. The out-of-area contact’s name and number. Two rally points, with a cross street a stranger could use. The meeting times: morning and late afternoon, so a person who misses one has a second chance the same day. Allergies and a medicine name. The NOAA channel you already painted on the radio. A child who cannot read yet still needs the adult card in the child’s bag, and a sentence they can say: who they belong to and where ‘home’ is if the block is closed.",
+      },
+      {
+        k: "p",
+        t: "A message that gets through is short. ‘We’re at the house. All four accounted for. Staying through tomorrow. Next check at 4.’ Do not spend the battery on a paragraph. If the network is up for ten minutes, that sentence is the whole use of it. If it is not up, the rally time is the message.",
+      },
+      {
+        k: "bullets",
+        items: [
+          "Agree on the two hours now. Write them on the fridge. When the fridge is dark they are still the hours.",
+          "Someone listens. Someone else writes the one sentence officials said. The notebook stays by the radio.",
+          "If you leave the house, you leave a paper note: where you went, what time, when you will be back. The people who panic a family are the ones who ‘just stepped out.’",
+          "School and work plans exist before the day. ‘Meet at the house’ fails when the house is the thing that is closed and the child is across town.",
+        ],
+      },
     ],
   },
   {
@@ -637,7 +952,7 @@ export const chapters: Chapter[] = [
     id: "builds",
     n: "16",
     title: "Builds",
-    dek: "Ten things you can make. None of them replace the item you should have bought.",
+    dek: "Things you can make. None of them replace the item you should have bought.",
     blocks: [
       {
         k: "h",
@@ -731,6 +1046,28 @@ export const chapters: Chapter[] = [
         k: "p",
         t: "Galvanized can, cardboard liner, electronics inside not touching metal, lid taped metal-to-metal with aluminum tape if the rim is painted. Test with a ringing phone. Store a spare radio, not the phone you need tomorrow morning. Details are in the power chapter.",
       },
+      {
+        k: "h",
+        t: "Retained-heat box",
+      },
+      {
+        k: "steps",
+        items: [
+          "A cooler, or a cardboard box lined with towels, big enough that the pot sits with cloth all around it. The lid has to close.",
+          "Bring rice or soaked beans to a real boil, lid on the pot, outdoors.",
+          "Set the pot in the nest immediately. Fill the gaps with towels so it cannot tip. Close the box.",
+          "Leave it alone for about an hour for rice, longer for beans. Opening it to check is how you let the heat out.",
+          "Eat it the same day. The box is an insulator, not a refrigerator. If the food is only warm when you open it, finish the boil or throw it out. Do not talk yourself into a lukewarm pot of beans.",
+        ],
+      },
+      {
+        k: "h",
+        t: "A first flush on the barrel",
+      },
+      {
+        k: "p",
+        t: "Roofs shed dust, bird mess, and whatever landed since the last rain. The first minutes of a storm should not enter the barrel. A simple version: a short length of downspout you can swing aside, or a bucket under the spout you empty onto the ground, then you set the barrel. Ten minutes of a steady rain on a small roof is a reasonable waste. Screen the inlet. A tight lid. Once a week in mosquito season, look. If you see larvae, the screen failed. Empty, scrub, start over. Everything you drink from the barrel is still filtered and disinfected. The barrel is storage of raw water, not a finish.",
+      },
     ],
   },
   {
@@ -757,7 +1094,7 @@ export const chapters: Chapter[] = [
         items: [
           "Grocery and warehouse clubs for food and bleach and soap.",
           "Hardware for buckets, sheeting, tape, the utility wrench, the extinguisher, the CO alarm.",
-          "Pharmacy for KI, rehydration salts, spare meds, N95s.",
+          "Pharmacy for rehydration salts, spare meds, N95s.",
           "Outdoor shop for the filter and the stove.",
           "Thrift for wool blankets. Wash them before you need them.",
           "Restaurant supply if you have one nearby, for bulk oil and rice at sane prices.",
@@ -778,6 +1115,18 @@ export const chapters: Chapter[] = [
       {
         k: "p",
         t: "The Plan page holds the operational list. This is the shape of it, so the list feels less arbitrary.",
+      },
+      {
+        k: "table",
+        head: ["When", "The job that matters", "The failure"],
+        rows: [
+          ["Hour 1", "Fill water, kill the toilet habit, one text", "Waiting to see if the power comes back"],
+          ["Hour 4", "Fridge food cooked or eaten, buckets set, radio hour", "Opening the freezer to ‘check’"],
+          ["Day 2–3", "Heater water into jugs, paper plan on the wall", "Flushing because the tank still looks normal"],
+          ["Day 4–14", "Rations, bleach, a walk only for water or people", "A generator in the garage"],
+          ["Day 15–60", "Haul, treat, date the jug, same three meals", "Skipping the cover on the bucket"],
+          ["Day 60–90", "Written hygiene card, take aid if it is offered", "A creek that ‘looks clear’"],
+        ],
       },
       {
         k: "h",
