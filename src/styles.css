@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #141612;
+  --color-surface: #1c1f18;
+  --color-elevated: #262920;
+  --color-fg: #efeae0;
+  --color-muted: #a39e90;
+  --color-brass: #d4a24a;
+  --color-rust: #c45c3e;
+  --color-rust-text: #ee8d72;
+  --color-border: #3a3d32;
+  --font-display: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --radius-sm: 0.125rem;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    line-height: 1.05;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brass);
+    color: var(--color-bg);
+  }
+
+  input,
+  textarea {
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
+}
+
+@layer utilities {
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .safe-bottom {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    animation: rise 180ms ease-out;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
