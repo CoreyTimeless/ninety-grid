@@ -3,25 +3,30 @@ import { Disclaimer, Eyebrow, Rule } from "@/components/ninety/bits";
 export function Cover({ onOpen, onNow }: { onOpen: () => void; onNow: () => void }) {
   return (
     <div className="flex min-h-dvh flex-col bg-bg text-fg">
-      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-5 pt-6 pb-8">
-        <div className="flex items-baseline justify-between">
+      <div className="relative">
+        <img
+          src="/cover.jpg"
+          alt="A lantern, a water jug, a pot, and a radio on a table in a dark kitchen."
+          className="h-[42vh] w-full object-cover object-[center_40%]"
+        />
+        <div className="absolute inset-x-0 top-0 flex items-baseline justify-between px-5 pt-6">
           <span className="font-display text-xs tracking-widest text-brass">FM–90</span>
-          <span className="font-display text-xs tracking-widest text-muted">GRID ONLY</span>
+          <span className="font-display text-xs tracking-widest text-fg">GRID ONLY</span>
         </div>
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-bg" />
+      </div>
 
-        <div className="flex flex-1 flex-col justify-end pb-10">
+      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col px-5 pb-8">
+        <div className="flex flex-1 flex-col justify-end pb-8">
           <Eyebrow>A CIVIL FIELD MANUAL</Eyebrow>
-          <h1 className="mt-3 font-display text-8xl leading-none">NINETY</h1>
-          <div className="mt-5">
+          <h1 className="mt-2 font-display text-7xl leading-none">NINETY</h1>
+          <div className="mt-4">
             <Rule />
           </div>
-          <p className="mt-5 font-display text-4xl leading-none">
+          <p className="mt-4 font-display text-3xl leading-none">
             Ninety days
             <br />
             without the grid
-          </p>
-          <p className="mt-4 max-w-xs text-lg text-muted">
-            Water, food, a bucket, and a fire that stays outside.
           </p>
         </div>
 
