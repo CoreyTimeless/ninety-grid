@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { BookOpen, CalendarClock, Compass, Package, Siren } from "lucide-react";
 import { Brief } from "@/components/ninety/brief";
+import { Cover } from "@/components/ninety/cover";
 import { KitView } from "@/components/ninety/kit-view";
 import { ManualView } from "@/components/ninety/manual-view";
 import { NowView } from "@/components/ninety/now-view";
@@ -23,10 +24,26 @@ const tabs: { id: Tab; label: string; icon: typeof Compass }[] = [
 function Home() {
   const ready = usePrepReady();
   const [tab, setTab] = useState<Tab>("brief");
+  const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [tab]);
+  }, [tab, opened]);
+
+  if (!opened) {
+    return (
+      <Cover
+        onOpen={() => {
+          setTab("manual");
+          setOpened(true);
+        }}
+        onNow={() => {
+          setTab("now");
+          setOpened(true);
+        }}
+      />
+    );
+  }
 
   return (
     <div className="min-h-dvh bg-bg text-fg">

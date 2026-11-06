@@ -3,6 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import { chapterPlainText, chapters } from "@/data/chapters";
 import type { Block } from "@/data/types";
 import { Callout, Eyebrow } from "@/components/ninety/bits";
+import { TitlePage } from "@/components/ninety/cover";
 
 const hidden = new Set(["clocks", "nuclear-hour", "radiation", "ki"]);
 
@@ -69,8 +70,11 @@ export function ManualView() {
 
   return (
     <div className="fade-in">
-      <Eyebrow>{`${manual.length} CHAPTERS`}</Eyebrow>
-      <h1 className="mt-2 font-display text-5xl">Manual</h1>
+      {q.trim() ? null : <TitlePage />}
+      <div className={q.trim() ? "" : "mt-8"}>
+        <Eyebrow>{`${list.length} CHAPTERS`}</Eyebrow>
+        <h2 className="mt-2 font-display text-4xl">Contents</h2>
+      </div>
       <label className="mt-4 block" htmlFor="manual-search">
         <span className="sr-only">Search the manual</span>
         <input
