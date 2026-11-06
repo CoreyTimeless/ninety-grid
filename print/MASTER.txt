@@ -1,0 +1,9 @@
+Interior pages: 54
+Trim: 6 x 9 in
+Bleed: none on the interior
+Paper assumed for the cover spine: black-and-white cream, 0.0025 in per page
+Spine: 0.135 in
+Full cover: 12.385 x 9.25 in
+Cover bleed: 0.125 in
+White rectangle on the back is the barcode zone. Leave it empty.
+If you change the interior, run: node --experimental-strip-types scripts/build-paperback.mjs
