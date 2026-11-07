@@ -158,7 +158,17 @@ export function renderInstallPageHtml(template, { host, url } = {}) {
 }
 
 export function renderWebManifest(hostHeader) {
-  const name = appNameFromHost(hostHeader);
+  const fromHost = appNameFromHost(hostHeader);
+  let name = fromHost;
+  if (fromHost === DEFAULT_APP_NAME) {
+    try {
+      const site = JSON.parse(readFileSync(join(process.cwd(), OG_SITE_REL_PATH), "utf8"));
+      const title = String(site?.title ?? "").trim();
+      if (title) name = title;
+    } catch {
+      /* keep the fallback name */
+    }
+  }
   return JSON.stringify(
     {
       name,
@@ -167,13 +177,20 @@ export function renderWebManifest(hostHeader) {
       start_url: "/",
       scope: "/",
       display: "standalone",
-      background_color: "#000000",
-      theme_color: "#000000",
+      background_color: "#141612",
+      theme_color: "#141612",
       icons: [
         {
           src: "/__grok/icon-180.png",
           sizes: "180x180",
           type: "image/png",
+          purpose: "any",
+        },
+        {
+          src: "/icon-512.png",
+          sizes: "512x512",
+          type: "image/png",
+          purpose: "any",
         },
       ],
     },

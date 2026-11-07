@@ -9,7 +9,23 @@ import { NowView } from "@/components/ninety/now-view";
 import { PlanView } from "@/components/ninety/plan-view";
 import { usePrepReady } from "@/components/ninety/bits";
 
-export const Route = createFileRoute("/")({ component: Home });
+function savedScreen(): { opened: boolean; tab: Tab } {
+  if (typeof window === "undefined") return { opened: false, tab: "brief" };
+  try {
+    const raw = localStorage.getItem("ninety-screen");
+    if (!raw) return { opened: false, tab: "brief" };
+    const parsed = JSON.parse(raw) as { opened?: boolean; tab?: Tab };
+    const tab = parsed.tab && tabs.some((item) => item.id === parsed.tab) ? parsed.tab : "brief";
+    return { opened: Boolean(parsed.opened), tab };
+  } catch {
+    return { opened: false, tab: "brief" };
+  }
+}
+
+export const Route = createFileRoute("/")({
+  ssr: false,
+  component: Home,
+});
 
 type Tab = "brief" | "now" | "manual" | "kit" | "plan";
 
@@ -23,34 +39,17 @@ const tabs: { id: Tab; label: string; icon: typeof Compass }[] = [
 
 function Home() {
   const ready = usePrepReady();
-  const [tab, setTab] = useState<Tab>("brief");
-  const [opened, setOpened] = useState(false);
-  const [booted, setBooted] = useState(false);
+  const saved = savedScreen();
+  const [tab, setTab] = useState<Tab>(saved.tab);
+  const [opened, setOpened] = useState(saved.opened);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem("ninety-screen");
-      if (raw) {
-        const parsed = JSON.parse(raw) as { opened?: boolean; tab?: Tab };
-        if (parsed.tab && tabs.some((item) => item.id === parsed.tab)) setTab(parsed.tab);
-        if (parsed.opened) setOpened(true);
-      }
-    } catch {
-      /* a bad save just opens the cover */
-    }
-    setBooted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!booted) return;
     localStorage.setItem("ninety-screen", JSON.stringify({ opened, tab }));
-  }, [booted, opened, tab]);
+  }, [opened, tab]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [tab, opened]);
-
-  if (!booted) return <div className="min-h-dvh bg-bg" />;
 
   if (!opened) {
     return (

@@ -9,7 +9,20 @@ const APP_NAME = "NINETY — 90-day field manual";
 function KeepOnPhone() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
-    navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {});
+    const urls = ["/", "/cover.jpg", "/favicon.svg", "/fonts.css", "/__grok/icon-180.png", "/icon-512.png"];
+    document.querySelectorAll("script[src], link[rel='stylesheet']").forEach((node) => {
+      const src = node.getAttribute("src") || node.getAttribute("href");
+      if (!src || src.startsWith("data:")) return;
+      urls.push(new URL(src, location.href).href);
+    });
+    navigator.serviceWorker.register("/sw.js", { scope: "/" }).then((reg) => {
+      const send = () => {
+        const worker = reg.active;
+        worker?.postMessage({ type: "cache", urls });
+      };
+      if (reg.active) send();
+      else navigator.serviceWorker.ready.then(send).catch(() => {});
+    }).catch(() => {});
   }, []);
   return null;
 }
@@ -32,15 +45,10 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap",
-      },
+      { rel: "stylesheet", href: "/fonts.css" },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/__grok/icon-180.png" },
     ],
   }),
   component: () => (
