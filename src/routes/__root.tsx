@@ -17,6 +17,7 @@ export const Route = createRootRoute({
           "A field manual for 90 days without the power grid. Water, food, sanitation, fuel, and the kit to buy before the lights go out.",
       },
       { name: "theme-color", content: "#141612" },
+      { name: "apple-mobile-web-app-title", content: "NINETY" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

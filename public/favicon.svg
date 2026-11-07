@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="NINETY">
-  <rect width="32" height="32" rx="3" fill="#141612"/>
-  <rect x="6.5" y="7" width="4.4" height="16.5" fill="#efeae0"/>
-  <rect x="21.1" y="7" width="4.4" height="16.5" fill="#efeae0"/>
-  <polygon points="6.5,7 10.9,7 25.5,23.5 21.1,23.5" fill="#efeae0"/>
-  <rect x="6.5" y="25.2" width="19" height="1.6" fill="#d4a24a"/>
+  <rect width="32" height="32" fill="#141612"/>
+  <text x="16" y="23.2" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="20" font-weight="700" fill="#efeae0">90</text>
+  <rect x="11.5" y="25.6" width="9" height="1.2" fill="#d4a24a"/>
 </svg>
