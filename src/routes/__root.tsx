@@ -1,9 +1,18 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "NINETY — 90-day field manual";
+
+function KeepOnPhone() {
+  useEffect(() => {
+    if (!("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {});
+  }, []);
+  return null;
+}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -17,6 +26,8 @@ export const Route = createRootRoute({
           "A field manual for 90 days without the power grid. Water, food, sanitation, fuel, and the kit to buy before the lights go out.",
       },
       { name: "theme-color", content: "#141612" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-title", content: "NINETY" },
     ],
     links: [
@@ -39,6 +50,7 @@ export const Route = createRootRoute({
       </head>
       <body>
         <PreviewHostBridge />
+        <KeepOnPhone />
         <AuthProvider>
           <Outlet />
         </AuthProvider>

@@ -25,10 +25,32 @@ function Home() {
   const ready = usePrepReady();
   const [tab, setTab] = useState<Tab>("brief");
   const [opened, setOpened] = useState(false);
+  const [booted, setBooted] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("ninety-screen");
+      if (raw) {
+        const parsed = JSON.parse(raw) as { opened?: boolean; tab?: Tab };
+        if (parsed.tab && tabs.some((item) => item.id === parsed.tab)) setTab(parsed.tab);
+        if (parsed.opened) setOpened(true);
+      }
+    } catch {
+      /* a bad save just opens the cover */
+    }
+    setBooted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!booted) return;
+    localStorage.setItem("ninety-screen", JSON.stringify({ opened, tab }));
+  }, [booted, opened, tab]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [tab, opened]);
+
+  if (!booted) return <div className="min-h-dvh bg-bg" />;
 
   if (!opened) {
     return (
