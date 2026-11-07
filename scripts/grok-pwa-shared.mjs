@@ -157,17 +157,12 @@ export function renderInstallPageHtml(template, { host, url } = {}) {
     .replaceAll("{{APP_URL}}", escapeHtml(stripInstallParams(url)));
 }
 
-export function renderWebManifest(hostHeader) {
+export function renderWebManifest(hostHeader, site) {
   const fromHost = appNameFromHost(hostHeader);
   let name = fromHost;
   if (fromHost === DEFAULT_APP_NAME) {
-    try {
-      const site = JSON.parse(readFileSync(join(process.cwd(), OG_SITE_REL_PATH), "utf8"));
-      const title = String(site?.title ?? "").trim();
-      if (title) name = title;
-    } catch {
-      /* keep the fallback name */
-    }
+    const baked = String(site?.title ?? "").trim();
+    if (baked) name = baked;
   }
   return JSON.stringify(
     {
